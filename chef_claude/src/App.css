@@ -1,0 +1,270 @@
+#root {
+    --ff-all: Inter, sans-serif;
+    --title-black: hsla(60, 3%, 8%, 1); 
+
+    --fw-regular: 400;
+    --fw-semi-bold: 500;
+    --fw-bold: 600;
+}
+
+/*** Normalization ***/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.5;
+}
+
+
+/***********************/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 
+                0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    
+    padding-block: 1rem;            
+}
+
+header h1 {
+    font-size: 2rem;
+    font-family: var(--ff-all);
+    color: var(--title-black);
+    font-weight: var(--fw-regular);
+}
+
+header img{
+    max-width: 2.5rem;
+}
+
+main{
+  display: grid;
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+form input{
+  flex: 4;
+
+  border-color: hsla(216, 12%, 84%, 1);
+  border-width: 1px;
+  border-radius: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+  color: var(--title-black);
+  font-weight: 500;
+  font-family: var(--ff-all);
+  font-size: 0.875rem;
+
+  padding: 0.5rem;
+}
+
+form input::placeholder{
+  color: hsla(220, 9%, 46%, 1);
+  font-weight: 500;
+  font-family: var(--ff-all);
+  font-size: 0.875rem;
+}
+
+form button{
+  flex: 1;
+  border: transparent;
+  border-radius: 0.2rem;
+  padding: 0.5rem 2rem;
+
+  font-family: var(--ff-all);
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  
+  color: hsla(60, 17%, 98%, 1);
+  background-color: hsla(60, 3%, 8%, 1);
+
+  white-space: nowrap;
+
+
+}
+
+
+/**** Ingredient List ****/
+
+.ingredientList{
+  margin-inline: auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+.ingredientList ul{
+  padding-inline-start: 1.5rem;
+}
+
+.ingredientListTitle{
+  color: var(--title-black);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-all);
+  font-size: 1.875rem;
+
+  padding-bottom: 1rem;
+}
+
+.listIngItem{
+  color: hsla(215, 18%, 34%, 1);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-all);
+  font-size: 1.125rem;
+}
+
+/*** Recipe Card ***/
+.getRecipeCard{
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+
+  justify-content: space-between;
+
+  background-color: hsla(48, 14%, 93%, 1);
+  border-radius: 1rem;
+
+  margin-inline: auto;
+
+}
+
+.recipeCardTextTitle{
+  font-size: 1.125rem;
+  font-family: var(--ff-all);
+  font-weight: var(--fw-semi-bold);
+  color: var(--title-black);
+}
+
+.recipeCardTextDescription{
+  font-size: 0.875rem;
+  font-family: var(--ff-all);
+  font-weight: var(--fw-regular);
+  color: hsla(220, 9%, 46%, 1);
+}
+
+.recipeCardButton{
+  background-color: hsla(15, 57%, 58%, 1);
+  color: hsla(60, 17%, 98%, 1);
+
+  font-family: var(--ff-all);
+  font-size: 0.875rem;
+  font-weight: var(--fw-semi-bold);
+
+  border: transparent;
+  border-radius: 0.375rem;
+  padding-inline: 1.1rem;
+  padding-block: 0.6rem;
+
+}
+
+/*** Recipe Card ***/
+
+.recipeCard{
+  margin-inline: auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+.recipeCard h1{
+  color: var(--title-black);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-all);
+  font-size: 1.875rem;
+
+  padding-bottom: 1rem;
+}
+
+.recipeText{
+  font-family: var(--ff-all);
+  font-size: 1.125rem;
+  font-weight: var(--fw-regular);
+  color: hsla(215, 18%, 34%, 1);
+  line-height: 1.75rem;
+}
+
+.recipeText ul li, .recipeText ol li {
+    margin-bottom: 0.5rem;
+}
+
+
